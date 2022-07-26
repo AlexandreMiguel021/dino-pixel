@@ -6,6 +6,10 @@
 @import 'swiper/css';
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     font-family: 'Press Start 2P', cursive;
     overflow-x: hidden;
