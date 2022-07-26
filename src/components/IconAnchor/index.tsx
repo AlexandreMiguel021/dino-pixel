@@ -9,7 +9,7 @@ type IconButtonProps = {
 export default function IconButton({ href, children }: IconButtonProps) {
   return (
     <Link href={href}>
-      <div className='text-aliceBlue cursor-pointer hover:scale-105 drop-shadow-xl  duration-200 text-4xl bg-primary p-3 items-center justify-center rounded-full w-12 flex h-12'>
+      <div className='flex h-12 w-12 cursor-pointer  items-center justify-center rounded-full bg-primary p-3 text-4xl text-aliceBlue drop-shadow-xl duration-200 hover:scale-105'>
         {children}
       </div>
     </Link>

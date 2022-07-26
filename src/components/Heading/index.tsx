@@ -6,7 +6,7 @@ type HeadingProps = {
 
 export default function Heading({ children }: HeadingProps) {
   return (
-    <h2 className='text-3xl inline-block my-6 text-aliceBlue border-b-4'>
+    <h2 className='my-6 inline-block border-b-4 text-3xl text-aliceBlue'>
       {children}
     </h2>
   )

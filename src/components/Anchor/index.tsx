@@ -11,7 +11,7 @@ export default function Anchor(props: AnchorProps) {
   return (
     <Link href={href!} {...rest}>
       <div
-        className={`flex ${bg} w-full sm:max-w-max p-4 rounded-sm items-center gap-3 drop-shadow-xl cursor-pointer hover:-translate-y-1 duration-200 hover:opacity-95`}
+        className={`flex ${bg} w-full cursor-pointer items-center gap-3 rounded-sm p-4 drop-shadow-xl duration-200 hover:-translate-y-1 hover:opacity-95 sm:max-w-max`}
       >
         {children}
       </div>

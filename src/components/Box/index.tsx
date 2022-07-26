@@ -6,8 +6,8 @@ type BoxProps = {
 
 export default function Box({ description, number, title }: BoxProps) {
   return (
-    <div className='w-full flex items-center gap-10 px-4 flex-col lg:flex-row lg:h-60 bg-neutral-900 border-4 roadmap-box z-10 hover:border-primary  hover:roadmap-box-up hover:scale-105 duration-300'>
-      <div className='bg-primary px-7 mt-6 lg:mt-0 lg:py-3 border-b-2 roadmap-box text-xl'>
+    <div className='roadmap-box hover:roadmap-box-up z-10 flex w-full flex-col items-center gap-10 border-4 bg-neutral-900 px-4 duration-300 hover:scale-105  hover:border-primary lg:h-60 lg:flex-row'>
+      <div className='roadmap-box mt-6 border-b-2 bg-primary px-7 text-xl lg:mt-0 lg:py-3'>
         <span>{number}</span>
       </div>
       <div className='space-y-5 pb-3 lg:pb-0'>

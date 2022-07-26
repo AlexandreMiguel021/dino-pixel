@@ -9,12 +9,12 @@ export default function Accordion({ title, description }: AccordionProps) {
     <Disclosure>
       {({ open }: { open: boolean }) => (
         <div className='flex flex-col'>
-          <Disclosure.Button className='p-4 text-lg hover:border-primary/80 duration-200 hover:bg-neutral-800/10 bg-neutral-800/30 border-2 w-full border-primary rounded-sm flex justify-between'>
+          <Disclosure.Button className='flex w-full justify-between rounded-sm border-2 border-primary bg-neutral-800/30 p-4 text-lg duration-200 hover:border-primary/80 hover:bg-neutral-800/10'>
             {title}
             {open ? (
-              <div className='-rotate-90 duration-200 text-primary'>{'>'}</div>
+              <div className='-rotate-90 text-primary duration-200'>{'>'}</div>
             ) : (
-              <div className='rotate-90 duration-200  text-primary'>{'>'}</div>
+              <div className='rotate-90 text-primary  duration-200'>{'>'}</div>
             )}
           </Disclosure.Button>
           <Transition
@@ -27,7 +27,7 @@ export default function Accordion({ title, description }: AccordionProps) {
             leaveTo='transform scale-95 opacity-0'
           >
             <Disclosure.Panel
-              className='bg-neutral-800/90 text-sm w-full py-5 border-2 border-t-0 border-primary border-dashed px-4'
+              className='w-full border-2 border-t-0 border-dashed border-primary bg-neutral-800/90 py-5 px-4 text-sm'
               static
             >
               {description}
