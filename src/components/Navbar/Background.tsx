@@ -16,7 +16,7 @@ export default function NavbarBackground() {
 
   return (
     <div
-      className={`bg-neutral-900 h-32 fixed w-full transition-all duration-300 shadow-lg ${currentShadow} ${
+      className={`fixed h-32 w-full bg-neutral-900 shadow-lg transition-all duration-300 ${currentShadow} ${
         height > 30 ? 'ranslate-y-0' : '-translate-y-full'
       }`}
     />
