@@ -2,6 +2,9 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { Fragment } from 'react'
 import 'styles/globals.css'
+import ReactGA from 'react-ga'
+const TRACKING_ID = 'G-J0RP65X61N'
+ReactGA.initialize(TRACKING_ID)
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

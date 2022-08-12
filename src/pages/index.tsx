@@ -14,11 +14,21 @@ import Aos from 'aos'
 import { useEffect } from 'react'
 import 'aos/dist/aos.css'
 import Accordion from 'components/Accordion'
+import ReactGA from 'react-ga'
+
+const useAnalyticsEventTracker = (category = 'Dino') => {
+  const eventTracker = (action = 'test action', label = 'test label') => {
+    ReactGA.event({ category, action, label })
+  }
+  return eventTracker
+}
 
 export default function Home() {
   useEffect(() => {
     Aos.init({ duration: 1000, once: true })
   }, [])
+
+  const gaEventTracker = useAnalyticsEventTracker('Open Sea')
 
   return (
     <Layout>
@@ -49,7 +59,11 @@ export default function Home() {
               </div>
 
               <div className='flex flex-wrap gap-4'>
-                <Anchor bg='bg-neutral-700' href='#'>
+                <Anchor
+                  bg='bg-neutral-700'
+                  href='#'
+                  onClick={() => gaEventTracker('call')}
+                >
                   Join Discord <Discord />
                 </Anchor>
                 <Anchor bg='bg-primary' href='#'>
